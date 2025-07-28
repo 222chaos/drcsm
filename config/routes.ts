@@ -1,26 +1,43 @@
-﻿export default [
+﻿// src/routes.ts
+export default [
   {
     path: '/',
-    redirect: '/disaster-recovery', 
+    redirect: '/services',
   },
   {
-    path: '/disaster-recovery',
-    name: '灾备服务配置',
-    icon: 'cluster',
-    component: './DisasterRecovery/ServiceList',
+    name: '服务管理',
+    path: '/services',
+    icon: 'AppstoreOutlined',
     routes: [
       {
-        path: '/disaster-recovery/new',
-        name: '新建服务',
-        component: './DisasterRecovery/ServiceDetail',
+        name: '服务列表',
+        path: '/services',
+        component: './ServiceList',
+      },
+      {
+        name: '服务详情',
+        path: '/services/:id',
+        component: './ServiceDetail',
         hideInMenu: true,
       },
       {
-        path: '/disaster-recovery/:id',
+        name: '新增服务',
+        path: '/services/new',
+        component: './ServiceForm',
+        hideInMenu: true,
+      },
+      {
         name: '编辑服务',
-        component: './DisasterRecovery/ServiceDetail',
+        path: '/services/:id/edit',
+        component: './ServiceForm',
         hideInMenu: true,
       },
     ],
+  },
+  {
+    name: '服务监控',
+    path: '/monitor',
+    icon: 'MonitorOutlined',
+    component: './Monitor',
   },
 ];
