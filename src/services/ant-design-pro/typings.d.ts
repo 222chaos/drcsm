@@ -1,3 +1,4 @@
+
 declare namespace API {
   type deleteServiceApiV1ServicesServiceIdDeleteParams = {
     service_id: number;

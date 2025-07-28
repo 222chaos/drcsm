@@ -9,6 +9,6 @@ import { errorConfig } from './requestErrorConfig';
 import '@ant-design/v5-patch-for-react-19';
 
 export const request: RequestConfig = {
-  baseURL: 'http://192.168.100.10:9090/api/v1',
+  baseURL: 'http://192.168.100.10:9191/',
   ...errorConfig,
 };

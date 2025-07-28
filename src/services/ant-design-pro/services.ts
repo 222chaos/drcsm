@@ -11,8 +11,8 @@ export async function listServicesApiV1ServicesGet(
   return request<API.ServiceConfigResponse[]>("/api/v1/services/", {
     method: "GET",
     params: {
-      // limit has a default value: 100
-      limit: "100",
+      // // limit has a default value: 100
+      // limit: "100",
       ...params,
     },
     ...(options || {}),
